@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&amp;display=swap"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="shortcut icon" href="images/logofv.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/vendors.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/menu.js"></script>
+
+    <title>Criação e Otimização de Sites</title>
+
+
+    <!-- <script>
+
+      $(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 100) {
+            $('header  .age').attr('src', 'img/log/log-svg.svg');
+          }
+          if ($(this).scrollTop() < 100) {
+            $('header  .age').attr('src', 'img/log/logo.svg');
+          }
+        })
+      });
+    </script> -->
+    <style>
+      :root {
+        /* --orange: #ff9000; */
+        --green: #25d366;
+      }
+
+
+
+
+      .tabs {
+        height: 29px;
+        cursor: pointer;
+
+      }
+
+      .tab {
+        position: relative;
+        padding: 0;
+        flex: 1;
+        border: 2px solid #25d366;
+        text-transform: capitalize;
+        text-align: center;
+      }
+
+      .tab span {
+        width: 0px;
+        height: 3px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        background: #a00909;
+      }
+
+      .tab:hover span {
+        width: 100%;
+      }
+
+      .activeTab span {
+        width: 100%;
+      }
+
+
+
+      #product {
+        display: block;
+      }
+
+      span {
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 0;
+        height: 3px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        background: #df0707;
+        transition: all 0.3s ease;
+      }
+
+      .list-item:hover span {
+        width: 100%;
+      }
+
+
+
+      button:hover {
+        background: var(--black);
+        color: #fff;
+      }
+
+      .min45 {
+        min-height: 31vh;
+      }
+
+      .uv {
+        background-image: url(images/fundo.png);
+        height: 240px;
+        width: 45%;
+        background-repeat: no-repeat;
+        background-position: 100% 1rem;
+        position: absolute;
+      }
+
+      .uv2 {
+        background-image: url(images/fundo2.png);
+        height: 240px;
+        width: 45%;
+        background-repeat: no-repeat;
+        background-position: 0 1rem;
+        position: absolute;
+      }
+
+      .icones-servicos {
+        width: 453px;
+        margin-top: -2rem;
+        float: right;
+        margin-right: 13rem;
+      }
+
+      .a8rem {
+        margin-top: -6rem;
+      }
+
+      .icone-servico-1 {
+        width: 500px;
+        margin-top: -6rem;
+        margin-right: 7rem;
+        float: right;
+      }
+
+      .sliderMain.-type-1 .sliderMain__title {
+        word-wrap: break-word;
+        font-size: 7.6vw;
+      }
+
+      h2 {
+        font-size: var(--text-4xl);
+      }
+
+      .icone-servico-2 {
+        width: 500px;
+        margin-top: -6rem;
+        float: left;
+        margin-left: 7rem
+      }
+
+      .texto-esquerdo {
+        text-align: right;
+        width: 50%;
+        float: right;
+      }
+
+      .layout-pt-lg {
+        padding-top: 4.5rem;
+      }
+
+      .layout-pb-xl {
+        padding-bottom: 4rem;
+      }
+
+      .y-gap-60>* {
+        padding-top: 0.125rem;
+        padding-bottom: 0.0rem;
+      }
+
+      .bg-dark-1 {
+        background-color: #25d366;
+      }
+
+      p {
+        margin: 0;
+        font-size: 0.9rem;
+      }
+
+      .text-light {
+        color: rgb(255 255 255);
+      }
+
+      .is-unpinned {
+        display: block;
+      }
+
+      .vcenter {
+        display: inline-block;
+        vertical-align: middle;
+        float: none;
+      }
+
+      hr {
+        opacity: 0.4;
+        box-sizing: content-box;
+        height: 0;
+        overflow: visible;
+      }
+
+      .layout-pt-lg {
+        padding-top: 4.5rem;
+      }
+
+      .layout-pb-lg {
+        padding-bottom: 3.5rem;
+      }
+
+      .icone {
+        background: #25d366;
+        width: 94px;
+        padding: 15px;
+        margin-top: 1rem;
+        border-radius: 8px;
+      }
+
+      .descr-icone {
+        font-size: 0.9rem;
+        margin-top: 1rem;
+        text-align: center;
+        padding: 0rem 1rem 0rem 0rem;
+      }
+
+      .descricao-portfolio {
+        font-size: 0.9rem;
+        padding: 1rem;
+        border: 1px solid gainsboro;
+        margin-bottom: 13px;
+        border-radius: 5px;
+      }
+
+      .back-site {
+        background-image: url('images/1.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        transform: translate3d(0px, 0px, 0px);
+        background-image: url(images/1.jpeg);
+        transition-duration: 0ms;
+      }
+
+      .hei {
+        height: 400px;
+      }
+
+      @media (max-width:748px) {
+        .sliderMain.-type-1 .sliderMain__title {
+          word-wrap: break-word;
+          font-size: 16.6vw;
+        }
+
+        .hei {
+          height: 200px;
+        }
+
+        .bounce-1 {
+          animation-name: bounce-1;
+          animation-timing-function: linear;
+          margin-top: 3rem !important;
+        }
+
+        .esquerdinha {
+          padding: 0rem 0.5rem 0rem 0rem;
+        }
+
+        .direitinha {
+          padding: 1rem 1rem 0rem 0.5rem;
+        }
+
+        .mt-16 {
+          margin-top: 1rem !important;
+          text-align: center;
+          font-weight: 600 !important;
+          font-size: 1.1rem;
+        }
+
+        .mt-8 {
+          margin-top: 0.5rem !important;
+          text-align: center;
+        }
+
+        .sectionHeading.-lg .sectionHeading__title {
+          text-align: center;
+          font-size: 2rem;
+        }
+
+        .button.-outline-black {
+          background-color: transparent;
+          border: 0.0625rem solid #121212;
+          width: 100%;
+        }
+
+        .segundo {
+          width: 270px;
+          padding: 0.3rem;
+          vertical-align: middle;
+          position: absolute;
+          margin: 0 auto;
+          margin-left: auto;
+          left: 0;
+        }
+
+        .sectionHeading__subtitle {
+          font-size: 0.875rem;
+          margin-bottom: 1.5rem;
+          text-align: center;
+          letter-spacing: 0.25em;
+          text-transform: uppercase;
+          color: black;
+        }
+
+        .card {
+          background: white;
+          padding: 2rem;
+        }
+      }
+    </style>
+  </head>
+
+
+  <!-- preloader start -->
+
+
+  <body class="preloader-visible">
+
+
+    <!-- 
+      <header class="header -dark -sticky-light js-header-light js-header">
+ 
+        <div class="header__bar">
+          <div class="header__logo js-header-logo">
+            <a data-barba href="home-1.html">
+              <img class="header__logo__light js-lazy" src="img/logo/logo-light.png" alt="Logo">
+            </a>
+            <a data-barba href="home-1.html">
+              <img class="header__logo__dark js-lazy" src="img/logo/logo-dark.png" alt="Logo">
+            </a>
+          </div>
+
+          <div class="header__menu js-header-menu">
+            <button type="button" class="nav-button-open js-nav-open">
+              <i class="icon" feather="menu"></i>
+            </button>
+          </div>
+        </div>
+
+        <nav class="nav js-nav">
+          <div class="nav__inner js-nav-inner">
+            <div class="nav__bg js-nav-bg"></div>
+
+            <div class="nav__container">
+              <div class="nav__header">
+                <button type="button" class="nav-button-back js-nav-back">
+                  <i class="icon" data-feather="arrow-left-circle"></i>
+                </button>
+
+                <button type="button" class="nav-btn-close js-nav-close pointer-events-none">
+                  <i class="icon" data-feather="x"></i>
+                </button>
+              </div>
+
+              <div class="nav__content">
+                <div class="nav__content__left">
+                  <div class="navList__wrap">
+                    <ul class="navList js-navList">
+                      <li>
+                        <a data-barba href="home-1-classic.html">
+                          Menu
+                        </a>
+                      </li>
+
+                      <li class="menu-item-has-children">
+                        <a>Home</a>
+                      </li>
+
+                      <li class="menu-item-has-children">
+                        <a>Quem somos</a>
+                      </li>
+
+
+                      <li class="menu-item-has-children">
+                        <a>Serviços</a>
+                      </li>
+
+
+                  
+                      
+
+                    
+
+                      <li class="menu-item-has-children">
+                        <a>Portfolio</a>
+
+                        <ul class="subnav-list">
+                          <li>
+                            <a data-barba href="vertical-projects.html">Vertical Projects</a>
+                          </li>
+                          <li>
+                            <a data-barba href="grid-simple-2-col.html">Simple 2 Columns</a>
+                          </li>
+                          <li>
+                            <a data-barba href="grid-masonry-2-col.html">Masonry 2 Columns</a>
+                          </li>
+                          <li>
+                            <a data-barba href="grid-masonry-3-col.html">Masonry 3 Columns</a>
+                          </li>
+                          <li>
+                            <a data-barba href="grid-masonry-4-col.html">Masonry 4 Columns</a>
+                          </li>
+                          <li>
+                            <a data-barba href="grid-fancy-2-col.html">Fancy 2 Columns</a>
+                          </li>
+                          <li>
+                            <a data-barba href="grid-fancy-3-col.html">Fancy 3 Columns</a>
+                          </li>
+                        </ul>
+                      </li>
+
+
+                      <li class="menu-item-has-children">
+                        <a>Contato</a>
+                      </li>
+
+                      
+
+                      
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="nav__content__right">
+                  <div class="nav__info">
+                    <div class="nav__info__item js-navInfo-item">
+                      <h5 class="text-sm tracking-none fw-500">
+                        Endereço
+                      </h5>
+
+                      <div class="nav__info__content text-lg text-white mt-16">
+                      <div class="footer__content text-base text-light mt-16 sm:mt-12">
+                  <p>R. Rodrigues Barbosa, 195 - Vila Reg. Feijó, São Paulo - SP, 03334-040</p>
+                      </div>
+                    </div>
+
+                    <div class="nav__info__item js-navInfo-item">
+                      <h5 class="text-sm tracking-none fw-500">
+                        Siga-nos
+                      </h5>
+
+                      <div class="nav__info__content text-lg text-white mt-16">
+                      <a style="    border: none;
+    margin-bottom: 1rem;
+" class="social__item text-white border-light" href="#">
+                  <img class="d-redes" src="img/icones/instagram.svg" alt="">
+                  </a>
+                  <a  style="    border: none;
+    margin-bottom: 1rem;
+"  class="social__item text-white border-light" href="#">
+                  <img class="d-redes" src="img/icones/facebook.svg" alt="">
+                  </a>
+                      </div>
+                    </div>
+
+                    <div class="nav__info__item js-navInfo-item">
+                      <h5 class="text-sm tracking-none fw-500">
+                        Contato
+                      </h5>
+
+                      <div class="nav__info__content text-lg text-white mt-16">
+                        <a href="#">contato@agenciadesites.com</a>
+                        <a href="#">11 3586-0346</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>  
+      </header> <!--marcar aqui-->
+
+    <header id="navigation" class="desk navbar navbar-dark bg-primary navbar-fixed-top">
+      <a href="second.html"> <img class="float-left primeiro age" src="" alt=""> </a>
+      <div class="top-icon" onclick="openNav()">
+
+        <i class="fa fa-bars text-white menu1"></i>
+      </div>
+      <nav class="navbar navbar-expand-sm bg-custom opnesidenav " id="open">
+        <ul class="navbar-nav">
+          <li class="nav-item text-right">
+            <a style="    height: 44px;" class="nav-link text-right" href="#" onclick="closeNav()"><i
+                class="fa fa-close"></i></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">O que fazemos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Melhor opção</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">Serviços</a>
+            <a href="" class="nav-link ddx">Criação de sites</a>
+            <a href="" class="nav-link ddx">Modelos de sites</a>
+            <a href="" class="nav-link ddx">Otimização</a>
+            <a href="" class="nav-link ddx">Links Patrocinados</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Contato</a>
+          </li>
+
+        </ul>
+      </nav>
+      <a href="" class="float  bounce-1 boxx2"
+        target="_blank" rel="noreferrer" title="Atendimento via WhatsApp" alt="Atendimento via WhatsApp">
+        <i class="fa fa-whatsapp my-float"></i>
+      </a>
+    </header>
+
+
+    <header id="navigation" style="background:rgb(19, 177, 45)" class="mob navbar navbar-dark bg-primary navbar-fixed-top">
+      <a href="second.html"> <img class="float-left primeiro age" src="" alt=""> </a>
+      <div class="top-icon" onclick="openNavMob()">
+
+        <i class="fa fa-bars text-white menu1"></i>
+      </div>
+      <nav class="navbar navbar-expand-sm bg-custom opnesidenav " id="openmob">
+        <ul class="navbar-nav">
+          <li class="nav-item text-right">
+            <a style="    height: 44px;" class="nav-link text-right" href="#" onclick="closeNav()"><i
+                class="fa fa-close"></i></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Quem Somos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">Serviços</a>
+            <a href="criacao-de-sites.php" class="nav-link ddx">Criação de sites</a>
+            <a href="otimizacao.php" class="nav-link ddx">Otimização</a>
+            <a href="links-patrocinados.php" class="nav-link ddx">Links Patrocinados</a>
+            <a href="identidade-visual.php" class="nav-link ddx">Identidade visual</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contato.php">Contato</a>
+          </li>
+        </ul>
+      </nav>
+
+
+      <a href="https://api.whatsapp.com/send?1=pt_BR&amp;phone=5511993645083" class="float" target="_blank"
+        rel="noreferrer" title="Atendimento via WhatsApp" alt="Atendimento via WhatsApp">
+        <i class="fa fa-whatsapp my-float"></i>
+      </a>
+
+      <style rel="stylesheet" type="text/css">
+        .float {
+          position: fixed;
+          width: 60px;
+          height: 60px;
+          bottom: 100px;
+          right: 6px;
+          background-color: #25d366;
+          color: #FFF;
+          border-radius: 50px;
+          text-align: center;
+          font-size: 30px;
+          box-shadow: 2px 2px 3px #24a12a;
+          z-index: 100;
+        }
+
+        .my-float {
+          margin-top: 16px;
+        }
+      </style>
+
+
+    </header>
+
+    <!-- barba container start -->
+    <div class="barba-container">
+
+
+      <main class="">
+
+
+
+
+
+
+        <!-- section start -->
+        <section class="sliderMain -type-1 bg-black js-sliderMain-type-1">
+          <!-- swiper-wrapper start -->
+          <div class="swiper-wrapper">
+
+            <!-- swiper-slide start -->
+            <div class="swiper-slide overflow-hidden">
+              <div class="sliderMain__wrap">
+                <div class="sliderMain__img -cover-dark z-1 js-image">
+                  <!-- <div class="back-site"></div> -->
+                </div>
+
+                <div class="sliderMain__bgTitle fw-800 pb-48 md:d-none z-2 js-bgTitle">
+                  Cresça!
+                </div>
+
+                <div class="container-fluid">
+                  <div class="row justify-content-center text-center">
+                    <div class="col-sm-10">
+                      <div class="sliderMain__content pt-24 z-3">
+                        <div class="js-subtitle">
+                          <p
+                            class="sliderMain__subtitle leading-xs text-xs tracking-md uppercase fw-500 text-white mb-32">
+                            Soluções em marketing digital
+                          </p>
+                        </div>
+                        <div class="js-title">
+                          <h1 class="sliderMain__title fw-800 text-white bounce-1 boxx2">
+                            Cresça!
+                          </h1>
+                        </div>
+                        <div class="sliderMain__button js-button">
+                          <a class="button -md -outline-white text-white mt-32" href="#1">
+                            Saber mais
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- swiper-slide end -->
+
+
+
+
+            <!-- swipe
+          <!-- swiper-slide end -->
+
+          </div>
+          <!-- swiper-wrapper end -->
+
+          <!-- ui-element: Elementos link para de cima-->
+          <div class="ui-element -bottom-left js-ui">
+            <div class="ui-element__social text-white js-bottom-left-links">
+              <a href="#"></a>
+              <a href=""> <img class="d-redes" src="images/instagram.svg"
+                  alt=""></a>
+              <a href=""><img class="d-redes" src="images/facebook.svg"
+                  alt=""></a>
+              <a href="#"><img class="d-redes" src="images/email.svg" alt=""></a>
+            </div>
+          </div>
+          <!-- ui-element end -->
+
+          <!-- ui-element start -->
+          <!-- <div class="ui-element -bottom sm:d-none js-ui">
+       
+           <img style=" width: 166px;" src="images/scroll-white.gif" alt="">
+          
+        </div> -->
+          <!-- ui-element end -->
+
+          <!-- ui-element start -->
+
+          <!-- ui-element end -->
+        </section>
+        <!-- section end -->
+
+
+        <!-- section start -->
+        <section class="layout-pt-xl layout-pb-xl" id="1">
+          <!-- container start -->
+          <div class="container">
+
+            <!-- row start -->
+            <div class="row">
+              <div class="col-md-4">
+                <div class="sectionHeading -lg">
+                  <p style="color: #251304;" class="sectionHeading__subtitle">
+                    Impulsionando negócios
+                  </p>
+
+                  <h2 class="sectionHeading__title">
+                    Juntos podemos ir além!
+                  </h2>
+
+                  <p class="mt-16">
+                    Estratégia aliada a design para empresas em constante movimento e crescimento, estamos no mercado há
+                    3 anos, mais de 1000 empresas atendidas em diversos ramos de atividades. temos experiência e
+                    conhecimento para ajudar a vender de verdade! </p>
+
+                  <a href="contato.php" class="button -md -outline-black text-black mt-32">
+                    eu quero!
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-7 col-md-7">
+                <img style="width: 100%; margin-top:-6rem;" class="bounce-1 boxx2" src="images/mulhernoteagencia.png"
+                  alt="">
+              </div>
+              <div class="col-md-12">
+                <hr>
+              </div>
+            </div>
+            <!-- row end -->
+          </div>
+          <!-- row end -->
+
+        </section>
+      </main>
+    </div>
+    <!-- container end -->
+
+    <!-- section end -->
+
+
+
+    <!-- section start -->
+    <section>
+      <!-- container start -->
+      <div class="container">
+
+        <!-- row start -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="sectionHeading -md">
+              <p style="color: #000000;" class="text-center sectionHeading__subtitle">
+                Cresça!
+              </p>
+              <h2 class="text-center  sectionHeading__title">
+                O que fazemos?
+              </h2>
+            </div>
+          </div>
+        </div>
+        <!-- row end -->
+
+
+        <!-- row start -->   <!-- Incone de serviços que fazemos -->
+        <div class="row x-gap-60 y-gap-60 layout-pt-md">
+
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-5">
+                <img style="width: 100%;" src="images/Data extraction-pana.svg" alt="">
+                
+              </div>
+              <div class="col-md-7">
+                <div class="award">
+                  <div class="award__content">
+                    <h3 class="award__title text-2xl fw-500 mt-16">
+                      Criação de sites
+                    </h3>
+                    <p class="award__text mt-8">
+                      Fazemos a criação de sites profissionais para a sua empresa.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-5">
+                <img style="width: 100%;" src="images/SEO analytics team-bro.svg" alt="">
+              </div>
+              <div class="col-md-7">
+                <div class="award">
+                  <div class="award__content">
+                    <h3 class="award__title text-2xl fw-500 mt-16">
+                      Otimização
+                    </h3>
+                    <p class="award__text mt-8">
+                      Iremos otimizar o site da sua empresa para os mecanismos do google.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-5">
+                <img style="width: 100%;" src="images/Mobile Marketing-pana.svg" alt="">
+              </div>
+              <div class="col-md-7">
+                <div class="award">
+                  <div class="award__content">
+                    <h3 class="award__title text-2xl fw-500 mt-16">
+                      Links Patrocinados
+                    </h3>
+                    <p class="award__text mt-8">
+                      Trabalhamos com campanhas para o google, facebook e instagram.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-5">
+                <img style="width: 100%;" src="" alt="">
+              </div>
+              <div class="col-md-7">
+                <div class="award">
+                  <div class="award__content">
+                    <h3 class="award__title text-2xl fw-500 mt-16">
+                      Produção de vídeos
+                    </h3>
+                    <p class="award__text mt-8">
+                      Aqui vai um texto sobre
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-5">
+                <img style="width: 100%;" src="images/brand construction-amico.svg" alt="">
+              </div>
+              <div class="col-md-7">
+                <div class="award">
+                  <div class="award__content">
+                    <h3 class="award__title text-2xl fw-500 mt-16">
+                      Identidade visual
+                    </h3>
+                    <p class="award__text mt-8">
+                      Nossa equipe irá criar a identidade visual para a sua empresa.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-5">
+                <img style="width: 100%;" src="images/Add to Cart-amico.svg" alt="">
+              </div>
+              <div class="col-md-7">
+                <div class="award">
+                  <div class="award__content">
+                    <h3 class="award__title text-2xl fw-500 mt-16">
+                      Loja virtual
+                    </h3>
+                    <p class="award__text mt-8">
+                      Sua loja virtual funcionando em poucos dias.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        <!-- row end -->
+
+      </div>
+      <!-- container end -->
+    </section>
+
+
+    <section class="layout-pt-xl layout-pb-xl">
+      <!-- container start -->
+      <div class="container">
+
+        <!-- row start -->
+        <div class="row">
+          <div class="col-md-5">
+            <div class="sectionHeading -lg">
+              <p style="color: #25d366;" class="sectionHeading__subtitle">
+                Batendo metas
+              </p>
+
+              <h2 class="sectionHeading__title">
+                A melhor opção para você!
+              </h2>
+
+              <p class="mt-16">
+                Nossa empresa se concentra em planejamento estratégico, criação, desenvolvimento, manutenção, tecnologia e
+                mídias sociais utilizar plataformas interativas na internet para garantir sempre RESULTADOS de nossos
+                parceiros.
+              </p>
+              <div class="row">
+                
+                <div class="col-md-3 vcenter">
+                  <h6 class="descr-icone"><img class="icone" src="images/favorites.svg" alt=""> <br><br>
+                    Favorita dos clientes</h6>
+                </div>
+                <div class="col-md-3 vcenter">
+                  <h6 class="descr-icone"> <img class="icone" src="images/chart.svg" alt=""> <br><br>
+                    Atualizada no mercado</h6>
+                </div>
+                <div class="col-md-3 vcenter">
+                  <h6 class="descr-icone"> <img class="icone" src="images/heart.svg" alt=""> <br><br>
+                    Parceira dos clientes</h6>
+                </div>
+              </div>
+              <p></p>
+
+
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <img style="width: 100%; margin-top:-6rem;" class="bounce-1 boxx2" src="images/homem-boemio-com-os-bracos-cruzados.jpg" alt="">
+          </div>
+          <div class="col-md-12">
+            <hr>
+          </div>
+        </div>
+        <!-- row end -->
+      </div>
+      <!-- row end -->
+
+
+      <!-- container end -->
+    </section>
+
+
+
+
+
+    <div class="container">
+
+
+      <div class="row">
+        <div class="col-md-12">
+          <device class="sectionHeading -md">
+            <p style="color: #25d366;" class="text-center sectionHeading__subtitle">
+              Portfólio!
+            </p>
+            <h2 class="text-center  sectionHeading__title">
+              Nossos trabalhos
+            </h2>
+          </device>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="container">
+      <ul class="nav nav-tabs justify-content-center align-items-center" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#home">Sites</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link " data-toggle="tab" href="#menu1">Artes</a>
+        </li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+
+        <div id="home" class="container tab-pane active"><br>
+          <div class="row">
+            <div style="padding: 0;" class="col-md-4">
+              <div class="row">
+                <div class="col-md-12">
+                  <img class="img-portfolio" src="images/6.jpg" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div style="padding: 0;" class="col-md-4">
+              <div class="row">
+                <div class="col-md-12">
+                  <img class="img-portfolio" src="images/2.jpg" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div style="padding: 0;" class="col-md-4">
+              <div class="row">
+                <div class="col-md-12">
+                  <img class="img-portfolio" src="images/3.jpg" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div style="padding: 0;" class="col-md-4">
+              <div class="row">
+                <div class="col-md-12">
+                  <img class="img-portfolio" src="images/4.jpg" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div style="padding: 0;" class="col-md-4">
+              <div class="row">
+                <div class="col-md-12">
+                  <img class="img-portfolio" src="images/5.jpg" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div style="padding: 0;" class="col-md-4">
+              <div class="row">
+                <div class="col-md-12">
+                  <img class="img-portfolio" src="images/7.jpg" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div style="padding: 0;" class="col-md-4">
+              <div class="row">
+                <div class="col-md-12">
+                  <img class="img-portfolio" src="images/1.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div style="padding: 0;" class="col-md-4">
+              <div class="row">
+                <div class="col-md-12">
+                  <img class="img-portfolio" src="images/8.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div style="padding: 0;" class="col-md-4">
+              <div class="row">
+                <div class="col-md-12">
+                  <img class="img-portfolio" src="images/9.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="menu1" class="container tab-pane fade"><br>
+
+          <div class="row">
+            <div style="padding: 0;" class="col-md-4">
+              <div class="row">
+                <div class="col-md-12">
+                  <img class="img-portfolio2" src="images/a8.jpg" alt="">
+
+                </div>
+              </div>
+            </div>
+
+            <div style="padding: 0;" class="col-md-4">
+              <div class="row">
+                <div class="col-md-12">
+                  <img class="img-portfolio2" src="images/a9.jpg" alt="">
+
+                </div>
+              </div>
+            </div>
+
+            <div style="padding: 0;" class="col-md-4">
+              <div class="row">
+                <div class="col-md-12">
+                  <img class="img-portfolio2" src="images/a4.jpg" alt="">
+
+                </div>
+              </div>
+            </div>
+
+            <div style="padding: 0;" class="col-md-4">
+              <div class="row">
+                <div class="col-md-12">
+                  <img class="img-portfolio2" src="images/a3.jpg" alt="">
+
+                </div>
+              </div>
+            </div>
+
+            <div style="padding: 0;" class="col-md-4">
+              <div class="row">
+                <div class="col-md-12">
+                  <img class="img-portfolio2" src="images/a5.jpg" alt="">
+
+                </div>
+              </div>
+            </div>
+
+            <div style="padding: 0;" class="col-md-4">
+              <div class="row">
+                <div class="col-md-12">
+                  <img class="img-portfolio2" src="images/a7.jpg" alt="">
+
+                </div>
+              </div>
+            </div>
+
+            <div style="padding: 0;" class="col-md-4">
+              <div class="row">
+                <div class="col-md-12">
+                  <img class="img-portfolio2" src="images/1a.jpg" alt="">
+
+                </div>
+              </div>
+            </div>
+
+            <div style="padding: 0;" class="col-md-4">
+              <div class="row">
+                <div class="col-md-12">
+                  <img class="img-portfolio2" src="images/a6.jpg" alt="">
+
+                </div>
+              </div>
+            </div>
+
+            <div style="padding: 0;" class="col-md-4">
+              <div class="row">
+                <div class="col-md-12">
+                  <img class="img-portfolio2" src="images/a2.jpg" alt="">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="tab-content" id="js" data-tab-content="">
+      <div style="padding-top: 3rem;" class="row x-gap-60 y-gap-60 layout-pt-md">
+
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer start -->
+    <footer style="margin-top:3rem" class="footer -type-1 bg-dark-1">
+      <!-- container start -->
+      <div class="container">
+
+        <div class="footer__top">
+          <!-- row start -->
+          <div class="row y-gap-48 justify-content-between">
+            <div class="col-lg-auto col-sm-12">
+              <a href="" class="footer__logo text-white">
+                Um nome vai aqui
+              </a>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+              <h4 class="text-xl fw-500 text-white">
+                Onde Estamos
+              </h4>
+
+              <div class="footer__content text-base text-light mt-16 sm:mt-12">
+                <div style="border-bottom: solid 1px;margin-bottom: 10px;padding-bottom: 10px;"><i
+                    class="fa fa-map-marker fa-2x"></i> R. Aroeira - Cidade industrial Anápolis-GO,<br>
+                  03334-040</div>
+                <div style="border-bottom: solid 1px;margin-bottom: 10px;padding-bottom: 10px;"><a href="contato.php"
+                    class="button -underline"><i class="fa fa-envelope"></i> contato@dominio.com</a></div>
+                <div style="border-bottom: solid 1px;margin-bottom: 10px;padding-bottom: 10px;"><a
+                    href="tel:062995299207" class="button -underline"><i class="fa fa-phone"></i> 62 995299207</a></div>
+                <div style="border-bottom: solid 1px;margin-bottom: 10px;padding-bottom: 10px;"><a
+                    href="http://api.whatsapp.com/send?1=pt_BR&amp;phone=5562995299207" class="button -underline"><i
+                      class="fa fa-whatsapp"></i> 62 995299207</a></div>
+              </div>
+            </div>
+
+            <div class="col-lg-auto col-sm-4">
+              <h4 class="text-xl fw-500 text-white">
+                O Que Fazemos
+              </h4>
+
+              <div class="footer__content text-base text-light mt-16 sm:mt-12">
+                <div style="border-bottom: solid 1px;margin-bottom: 10px;padding-bottom: 10px;"><a
+                    href="" class="button -underline">Criação de Sites</a></div>
+                <div style="border-bottom: solid 1px;margin-bottom: 10px;padding-bottom: 10px;"><a href="otimizacao.php"
+                    class="button -underline mt-4">SEO - Otimizção de Sites</a></div>
+                <div style="border-bottom: solid 1px;margin-bottom: 10px;padding-bottom: 10px;"><a
+                    href="l" class="button -underline mt-4">Links Patrocinados</a></div>
+                <div style="border-bottom: solid 1px;margin-bottom: 10px;padding-bottom: 10px;"><a
+                    href="p" class="button -underline mt-4">Produção de Vídeos</a></div>
+                <div style="border-bottom: solid 1px;margin-bottom: 10px;padding-bottom: 10px;"><a
+                    href="" class="button -underline mt-4">Identidade Visual</a></div>
+                <div style="border-bottom: solid 1px;margin-bottom: 10px;padding-bottom: 10px;"><a
+                    href="" class="button -underline mt-4">E-Mail MKT</a></div>
+              </div>
+            </div>
+
+            <div class="col-lg-auto col-auto">
+              <h4 class="text-xl fw-500 text-white">
+                Siga-nos nas Redes Sociais
+              </h4>
+
+              <div class="social -bordered mt-16 sm:mt-12">
+
+                <a class="social__item text-white border-light" href="">
+                  <img class="d-redes" src="images/instagram.svg" alt="">
+                </a>
+                <a class="social__item text-white border-light" href="">
+                  <img class="d-redes" src="images/facebook.svg" alt="">
+                </a>
+
+              </div>
+            </div>
+          </div>
+          <!-- row end -->
+        </div>
+
+
+        <div class="footer__bottom -light">
+          <!-- row start -->
+          <div class="row">
+            <div class="col">
+              <div class="footer__copyright">
+                <p class="text-light">
+                  @ 2023, Um nome vai aqui.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- row end -->
+        </div>
+
+      </div>
+      <!-- container end -->
+    </footer> <!-- footer end -->
+
+
+
+
+
+    <!-- barba container end -->
+    <script>
+      function openNav() {
+        document.getElementById("open").style.width = "30%";
+      }
+
+      function closeNav() {
+        document.getElementById("open").style.width = "0%";
+      }
+
+
+
+    </script>
+
+    <script>
+      function openNavMob() {
+        document.getElementById("openmob").style.width = "100%";
+      }
+
+      function closeNavMob() {
+        document.getElementById("openmob").style.width = "0%";
+      }
+    </script>
+
+    <script type="text/javascript">//<![CDATA[
+
+
+      $(function () {
+        $(document).scroll(function () {
+          var $nav = $(".navbar-fixed-top");
+          $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        });
+      });
+      //]]></script>
+
+    <script type="text/javascript">
+      $(function () {
+        $(document).scroll(function () {
+          var $nav = $(".primeiro");
+          $nav.toggleClass('segundo', $(this).scrollTop() > $nav.height());
+        });
+      });
+    </script>
+
+    <script type="text/javascript">
+      $(function () {
+        $(document).scroll(function () {
+          var $nav = $(".menu1");
+          $nav.toggleClass('menu2', $(this).scrollTop() > $nav.height());
+        });
+      });
+    </script>
+
+    <script src="js/portfolio.js"></script>
+
+    <script src="js/main.js"></script>
+
+
+
+  </body>
+
+</html>
