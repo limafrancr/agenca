@@ -813,7 +813,7 @@ body {
 
 ::selection {
   color: white;
-  background-color: #5a5a5a;
+  background-color: #461515;
   text-shadow: none;
 }
 
@@ -2070,13 +2070,13 @@ h6 {
   transition: color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.navList__wrap a:hover {
+/* .navList__wrap a:hover {
   color: #ff6f00;
-}
+} */
 
-.navList__wrap a:not([href]):not([tabindex]):hover {
+/* .navList__wrap a:not([href]):not([tabindex]):hover {
   color: #ff6f00;
-}
+} */
 
 .navList {
   margin-top: -0.5rem;
